@@ -9,5 +9,5 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post('/registrations', [RegistrationController::class, 'store'])->middleware('throttle:20,1');
-Route::post('/contact-messages', [ContactMessageController::class, 'contactMessage'])->middleware('throttle:20,1');
+Route::post('registrations', [RegistrationController::class, 'store'])->middleware('throttle:20,1');
+Route::post('contact-messages', [ContactMessageController::class, 'contactMessage'])->middleware('throttle:20,1');
